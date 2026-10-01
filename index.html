@@ -18,12 +18,25 @@
             padding-right: 15%;        /* 👈 El mesāfa mel 7arf mtaah el telfoun */
         }
         
+        /* 👈 El cader el jdid: fih ken el ḥafa w transparent yebda mwafeq el background */
+        .login-container {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 30px 25px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         h1 {
             color: #003366;
             margin-bottom: 25px;
             font-size: 32px;
             width: 250px;              /* 👈 9ad el cases bil dhabt bch yji fi wasathom */
             text-align: center;        /* 👈 Yjip el ktaba "Sign In" fi wasat el sṭar mte3ha */
+            margin-top: 0;
         }
 
         .input-box {
@@ -56,24 +69,27 @@
 
         p { 
             color: #000; 
-            margin-top: 50px; 
+            margin-top: 30px; 
             font-size: 16px;
             width: 260px;              /* 👈 9ad el cases bch tji el jomla mwasla m3ahom */
             text-align: center;        /* 👈 Mwasse fel wasat */
+            margin-bottom: 0;
         }
         p a { color: #003366; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <h1>Sign In</h1>
-    
-    <input type="text" class="input-box" placeholder="Email or Phone Number">
-    <input type="password" class="input-box" placeholder="Password">
+    <div class="login-container">
+        <h1>Sign In</h1>
+        
+        <input type="text" class="input-box" placeholder="Email or Phone Number">
+        <input type="password" class="input-box" placeholder="Password">
 
-    <button>Login</button>
+        <button>Login</button>
 
-    <p>Don't have an account? <a href="#">sign up</a></p>
+        <p>Don't have an account? <a href="#">sign up</a></p>
+    </div>
 
 </body>
 </html>
